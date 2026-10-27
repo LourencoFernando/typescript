@@ -25,3 +25,7 @@ For each topic:
 4. Record what it means for larger systems and architectural decisions.
 
 This repository will grow with exercises, experiments, and notes as the learning progresses.
+
+## Exercises and notes
+
+Start with [TypeScript Foundations](foundations/README.md) for a suggested reading order, concept summaries, and questions to guide your practice.
