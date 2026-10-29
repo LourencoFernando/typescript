@@ -6,9 +6,13 @@ Small examples for understanding how TypeScript describes values and checks thei
 | --- | --- | --- |
 | [basics.ts](basics.ts) | Explicit annotations, inference, default parameters, inferred return types | Why is `userAge` a number even without an annotation? |
 | [flexible-types.ts](flexible-types.ts) | `any` and union types | What checks do you lose with `any`, and what does a union preserve? |
-| [arrays-objects.ts](arrays-objects.ts) | Array inference, union elements, `Array<T>` notation | Why can `users` contain strings and numbers together? |
+| [arrays-objects.ts](arrays-objects.ts) | Arrays, tuples, nested objects, `{}`, and `Record` | Why can `users` contain strings and numbers together? |
+| [choices.ts](choices.ts) | Enums, literal unions, and type aliases | How does an enum differ from a union of string literals? |
+| [special-types.ts](special-types.ts) | Nullable values | Why does `a` accept both a string and `null`? |
+| [functions.ts](functions.ts) | Return types, `void`, `never`, callbacks, and methods | How does `never` differ from `void`? |
+| [forms.ts](forms.ts) | DOM type assertions and null checks | What does the assertion guarantee, and what must you check at runtime? |
 
-The arrays file currently contains array examples only; object examples can be added as you study them.
+These files are standalone examples. Check them individually: some reuse names such as `User`, `user`, and `add`. The forms example requires a browser DOM.
 
 ## How to study an example
 
