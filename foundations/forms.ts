@@ -1,3 +1,4 @@
+// const inputEl = document.getElementById('user-name')!;
 // A type assertion does not check the element type at runtime.
 const inputEl = document.getElementById("user-name") as HTMLInputElement | null;
 

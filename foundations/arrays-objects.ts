@@ -1,7 +1,7 @@
 // Inferred as string[].
 let hobbies = ["Sports", "Cooking"];
 
-// hobbies.push(10); // Error: number is not assignable to string.
+// hobbies.push(10);
 
 // Parentheses make the union apply to each array element.
 let users: (string | number)[];
@@ -16,7 +16,7 @@ users = ["John", 1, "Jane", 2];
 let possibleResults: [number, number];
 
 possibleResults = [1, -1];
-// possibleResults = [1, 3, 5]; // Error: too many elements.
+// possibleResults = [1, 3, 5];
 
 let user: {
     name: string;
