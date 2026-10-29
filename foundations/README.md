@@ -18,8 +18,9 @@ These files are standalone examples. Check them individually: some reuse names s
 
 1. Predict the inferred types and which assignments TypeScript accepts.
 2. Read the code and comments, then check your reasoning with your editor's type hints.
-3. Experiment with one change at a time and explain any compiler error in your own words.
-4. If you use AI, ask it to challenge your explanation and compare alternatives.
+3. Uncomment examples one at a time to explore alternatives or expected type errors, then comment them out again.
+4. Experiment with one change at a time and explain any compiler error in your own words.
+5. If you use AI, ask it to challenge your explanation and compare alternatives.
 
 ## Design notes
 

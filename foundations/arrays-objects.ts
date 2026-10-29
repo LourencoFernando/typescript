@@ -3,7 +3,7 @@ let hobbies = ["Sports", "Cooking"];
 
 // hobbies.push(10);
 
-// Parentheses make the union apply to each array element.
+// Each element can be a string or number.
 let users: (string | number)[];
 // Equivalent to (string | number)[].
 let usersGeneric: Array<string | number>;
@@ -12,12 +12,13 @@ users = ["John", "Jane"];
 users = [1, 2, 3];
 users = ["John", 1, "Jane", 2];
 
-// A tuple requires two numbers in these positions.
+// Tuple: exactly two numbers.
 let possibleResults: [number, number];
 
 possibleResults = [1, -1];
 // possibleResults = [1, 3, 5];
 
+// Nested objects have their own property types.
 let user: {
     name: string;
     age: number | string;
@@ -36,7 +37,7 @@ let user: {
     },
 };
 
-// With strictNullChecks, {} accepts any non-nullish value, including primitives.
+// {} accepts non-nullish values, including primitives (strictNullChecks).
 let val: {} = "is a value";
 
 // String keys with string or number values.
