@@ -10,6 +10,8 @@ Small examples for understanding how TypeScript describes values and checks thei
 | [choices.ts](choices.ts) | Enums, literal unions, and type aliases | How does an enum differ from a union of string literals? |
 | [special-types.ts](special-types.ts) | Nullable values | Why does `a` accept both a string and `null`? |
 | [functions.ts](functions.ts) | Return types, `void`, `never`, callbacks, and methods | How does `never` differ from `void`? |
+| [optional.ts](optional.ts) | Optional parameters and properties, nullish coalescing (`??`) | Why does `"" ?? false` preserve the empty string? |
+| [unknown.ts](unknown.ts) | `unknown`, object narrowing, property checks, and callable methods | Which checks make it safe to call `val.log()`? |
 | [forms.ts](forms.ts) | DOM type assertions and null checks | What does the assertion guarantee, and what must you check at runtime? |
 
 These files are standalone examples. Check them individually: some reuse names such as `User`, `user`, and `add`. The forms example requires a browser DOM.
@@ -27,4 +29,6 @@ These files are standalone examples. Check them individually: some reuse names s
 - Inference can keep code concise while preserving type checking.
 - A union describes a deliberate set of possibilities. Before performing an operation specific to one member, narrow the value to that type.
 - `any` removes useful checks and can hide mistakes from the compiler.
+- Use optional parameters and properties when absence is valid in an API or configuration. Use `??` for defaults that preserve values such as `0`, `false`, and `""`.
+- Use `unknown` at boundaries where a value's shape is untrusted, then narrow it before use. Checking that a method exists and is callable does not validate its behavior or return value.
 - TypeScript's types do not validate external data at runtime. Runtime validation is a separate concern when designing system boundaries.
