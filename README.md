@@ -29,3 +29,5 @@ This repository will grow with exercises, experiments, and notes as the learning
 ## Exercises and notes
 
 Start with [TypeScript Foundations](foundations/README.md) for a suggested reading order, concept summaries, and questions to guide your practice.
+
+Continue with [TypeScript Compiler and Configuration](compiler/README.md) to explore compilation, project configuration, and compiler options.
