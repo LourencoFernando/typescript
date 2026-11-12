@@ -55,6 +55,8 @@ function calculateInvestment(data: InvestmentData): calculationResult {
         total = total * (1 + expectedReturn);
         totalInterestEarned = total - totalContributions - initialAmount;
         totalContributions = totalContributions + annualContribution;
+        // Add this year's contribution after interest, so it starts earning next year.
+        total = total + annualContribution;
 
         // Shorthand properties must still match InvestmentResult exactly.
         annualResults.push({
