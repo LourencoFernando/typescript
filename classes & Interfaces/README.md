@@ -12,7 +12,9 @@ tsc --noEmit --strict "classes & Interfaces/basics.ts"
 1. `basics.ts`: explicit fields, parameter properties, `private`, and `readonly`.
 2. `advanced.ts`: getters, setters, `protected`, `static`, inheritance, and
    abstract classes.
-3. `interfaces.ts`: declaring an object contract with an interface.
+3. `interfaces.ts`: declaring an object contract with an interface,
+   declaration merging, `extends`, `implements`, and typing variables and
+   parameters with an interface.
 
 ## Study questions
 
@@ -22,3 +24,6 @@ tsc --noEmit --strict "classes & Interfaces/basics.ts"
 - What do `private` and `readonly` protect at compile time but not at runtime?
 - Why does reading a property that has only a setter return `undefined`?
 - When should a base class be abstract instead of an interface?
+- What happens when two `interface` declarations share a name, and why is that
+  an error for `type` aliases?
+- Why can `AuthenticatableAdmin` narrow `role` to literals but not widen it?
