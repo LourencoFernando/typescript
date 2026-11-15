@@ -31,3 +31,9 @@ This repository will grow with exercises, experiments, and notes as the learning
 Start with [TypeScript Foundations](foundations/README.md) for a suggested reading order, concept summaries, and questions to guide your practice.
 
 Continue with [TypeScript Compiler and Configuration](compiler/README.md) to explore compilation, project configuration, and compiler options.
+
+Apply the basics in the [First TypeScript Project](projects/first-typescript-project/README.md), an investment calculator built step by step.
+
+Then study [Classes & Interfaces](classes%20%26%20Interfaces/README.md) for class features, inheritance, and object contracts.
+
+Move on to [Advanced Types](advanced%20types/README.md) for intersections, type guards, function overloads, index signatures, `as const`, and `satisfies`.
