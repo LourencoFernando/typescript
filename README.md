@@ -39,3 +39,5 @@ Then study [Classes & Interfaces](classes%20%26%20Interfaces/README.md) for clas
 Move on to [Advanced Types](advanced%20types/README.md) for intersections, type guards, function overloads, index signatures, `as const`, and `satisfies`.
 
 Continue with [Generic Types](generic%20types/README.md) for generic type aliases, functions, constraints, and classes.
+
+Practice classes and generics in the [Linked List](projects/linked-list/README.md) project, a simple starting point for a generic data structure.
