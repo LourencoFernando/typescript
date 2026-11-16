@@ -14,6 +14,7 @@ three top-level areas are checked and run differently:
 | `foundations/` | Standalone single-file examples; no tsconfig | `tsc --noEmit --strict foundations/<file>.ts` (one file at a time) | Usually not run; some throw on purpose, `forms.ts` needs a browser DOM |
 | `compiler/` | Compiler-option experiments with `package.json` (`@types/node`) | `cd compiler && npm ci && tsc -p . --noEmit` | `tsc -p .` then `node dist/app.js` |
 | `projects/first-typescript-project/` | First practice project (investment calculator, work in progress) | `cd projects/first-typescript-project && tsc --noEmit -p .` | `node calculator.ts` (Node 24 strips types) |
+| `projects/linked-list/` | Generic singly linked list (simple starting point) | `cd projects/linked-list && tsc --noEmit -p .` | `node linked-list.ts` (Node 24 strips types; no parameter properties) |
 
 Passing a filename to `tsc` ignores `tsconfig.json`. Use `-p .` inside
 `compiler/` and the project folder.
