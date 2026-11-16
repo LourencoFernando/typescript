@@ -37,3 +37,5 @@ Apply the basics in the [First TypeScript Project](projects/first-typescript-pro
 Then study [Classes & Interfaces](classes%20%26%20Interfaces/README.md) for class features, inheritance, and object contracts.
 
 Move on to [Advanced Types](advanced%20types/README.md) for intersections, type guards, function overloads, index signatures, `as const`, and `satisfies`.
+
+Continue with [Generic Types](generic%20types/README.md) for generic type aliases, functions, constraints, and classes.
