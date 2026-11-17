@@ -41,3 +41,5 @@ Move on to [Advanced Types](advanced%20types/README.md) for intersections, type 
 Continue with [Generic Types](generic%20types/README.md) for generic type aliases, functions, constraints, and classes.
 
 Practice classes and generics in the [Linked List](projects/linked-list/README.md) project, a simple starting point for a generic data structure.
+
+Then learn [Deriving Types from Types](deriving%20types/README.md): `typeof`, `keyof`, indexed access, mapped, template literal, and conditional types with `infer`.
