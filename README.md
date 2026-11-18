@@ -28,20 +28,19 @@ This repository will grow with exercises, experiments, and notes as the learning
 
 ## Exercises and notes
 
-Start with [TypeScript Foundations](foundations/README.md) for a suggested reading order, concept summaries, and questions to guide your practice.
+Follow the folders in this order. Each one has a README with a reading order,
+concept notes, and study questions.
 
-Continue with [TypeScript Compiler and Configuration](compiler/README.md) to explore compilation, project configuration, and compiler options.
+1. [TypeScript Foundations](foundations/README.md): types, inference, functions, objects, unions, and narrowing.
+2. [TypeScript Compiler and Configuration](compiler/README.md): compilation, project configuration, and compiler options.
+3. [First TypeScript Project](projects/first-typescript-project/README.md): an investment calculator that applies the basics, built step by step.
+4. [Classes & Interfaces](classes%20%26%20Interfaces/README.md): class features, inheritance, and object contracts.
+5. [Advanced Types](advanced%20types/README.md): intersections, type guards, function overloads, index signatures, `as const`, and `satisfies`.
+6. [Generic Types](generic%20types/README.md): generic type aliases, functions, constraints, and classes.
+7. [Linked List](projects/linked-list/README.md): a project that practices classes and generics, as a simple starting point for a generic data structure.
+8. [Deriving Types from Types](deriving%20types/README.md): `typeof`, `keyof`, indexed access, mapped, template literal, and conditional types with `infer`.
+9. [ECMAScript Decorators](ecmascript%20decorators/README.md): class, method, and field decorators and decorator factories.
 
-Apply the basics in the [First TypeScript Project](projects/first-typescript-project/README.md), an investment calculator built step by step.
-
-Then study [Classes & Interfaces](classes%20%26%20Interfaces/README.md) for class features, inheritance, and object contracts.
-
-Move on to [Advanced Types](advanced%20types/README.md) for intersections, type guards, function overloads, index signatures, `as const`, and `satisfies`.
-
-Continue with [Generic Types](generic%20types/README.md) for generic type aliases, functions, constraints, and classes.
-
-Practice classes and generics in the [Linked List](projects/linked-list/README.md) project, a simple starting point for a generic data structure.
-
-Then learn [Deriving Types from Types](deriving%20types/README.md): `typeof`, `keyof`, indexed access, mapped, template literal, and conditional types with `infer`.
-
-Explore [ECMAScript Decorators](ecmascript%20decorators/README.md) for class, method, and field decorators and decorator factories.
+Standalone example folders are type-checked one file at a time with
+`tsc --noEmit --strict <file>`. The compiler folder and the projects have their
+own `tsconfig.json`; run `tsc --noEmit -p .` inside them.
