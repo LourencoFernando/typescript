@@ -149,13 +149,13 @@ class ProjectInput {
         }
 
         const descriptionValidatable: Validatable = {
-            value: enteredTitle,
+            value: enteredDescription,
             required: true,
             minLength: 5
         }
 
         const peopleValidatable: Validatable = {
-            value: enteredTitle,
+            value: +enteredPeople,
             required: true,
             min: 1,
             max: 5
