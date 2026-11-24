@@ -15,7 +15,7 @@ three top-level areas are checked and run differently:
 | `compiler/` | Compiler-option experiments with `package.json` (`@types/node`) | `cd compiler && npm ci && tsc -p . --noEmit` | `tsc -p .` then `node dist/app.js` |
 | `projects/first-typescript-project/` | First practice project (investment calculator, work in progress) | `cd projects/first-typescript-project && tsc --noEmit -p .` | `node calculator.ts` (Node 24 strips types) |
 | `projects/linked-list/` | Generic singly linked list (simple starting point) | `cd projects/linked-list && tsc --noEmit -p .` | `node linked-list.ts` (Node 24 strips types; no parameter properties) |
-| `projects/drag-and-drop/` | Browser drag & drop app (work in progress) | `cd projects/drag-and-drop && npm ci && tsc --noEmit -p .` | `tsc -p .` (writes ignored `dist/`), then `npm start` (`lite-server`) |
+| `projects/drag-and-drop/` | Browser drag & drop app | `cd projects/drag-and-drop && npm ci && tsc --noEmit -p .` | `tsc -p .` (writes ignored `dist/`), then `npm start` (`lite-server`) |
 
 Passing a filename to `tsc` ignores `tsconfig.json`. Use `-p .` inside
 `compiler/` and the project folder.
@@ -26,8 +26,7 @@ Passing a filename to `tsc` ignores `tsconfig.json`. Use `-p .` inside
 - `projects/drag-and-drop/` is the exception among the projects: it uses the
   course's tsconfig (`experimentalDecorators`, `noEmitOnError`, no
   `noUncheckedIndexedAccess`), compiles `src/` to `dist/` (git-ignored), and
-  the page loads `dist/app.js` as a plain script. `src/app.ts` is in-progress
-  course work: don't add comments or rework it unless asked.
+  the page loads `dist/app.js` as a plain script.
 - The other project folders' tsconfigs have no `outDir` but enable `declaration` and
   `sourceMap`. Always use `--noEmit` there, or `tsc` writes `.js`, `.d.ts`, and
   `.map` files next to the source. They set `types: []`, so Node APIs such as

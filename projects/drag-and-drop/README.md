@@ -1,18 +1,26 @@
 # Drag & Drop
 
-A practice project (work in progress) for a browser app in TypeScript: add
-projects through a form and drag them between "active" and "finished" lists.
-It applies classes, DOM types, interfaces, union types, tuples, and a method
-decorator.
-
-## Current state
+A practice project for a browser app in TypeScript: add projects through a
+form and drag them between "active" and "finished" lists. It applies classes,
+generics, abstract classes, interfaces, enums, DOM types, union types, tuples,
+a method ## How it works
 
 - `ProjectInput` renders the form from the `#project-input` template, validates
-  the inputs on submit, and logs them.
-- `ProjectList` renders the "active" and "finished" lists from the
-  `#project-list` template.
-- `validate` checks a `Validatable` object (required, min/max length, min/max
-  value). Storing projects, rendering them in the lists, and drag events are
+  the inputs with `validate` on submit, and adds a project to the state.
+- `ProjectState` is a singleton that stores the projects and notifies its
+  listeners after `addProject` or `moveProject`. It extends the generic
+  `State<T>`, which holds the listener list.
+- `ProjectList` renders the "active" or "finished" list from the
+  `#project-list` template, listens to the state, and re-renders the projects
+  with a matching `ProjectStatus`.
+- `ProjectItem` renders one project from the `#single-project` template as a
+  draggable `<li>`.
+- All three components extend the abstract `Component<T, U>`, which clones a
+  template and attaches it to a host element.
+- Dragging an item stores its id in `dataTransfer`. Dropping it on the other
+  list calls `moveProject`, and both lists re-render from the new state.
+
+ and drag events are
   left for later iterations.
 
 ## Layout
@@ -47,6 +55,12 @@ npm start           # serve the folder and reload the browser on changes
 - `autobind` replaces the method with a getter that returns it bound to the
   instance. Without it, `addEventListener` would call `submitHandler` with
   `this` set to the form element.
+- `ProjectItem` implements `Draggable` and `ProjectList` implements
+  `DragTarget`, so the compiler requires every drag handler. A list only
+  accepts a drop if `dragOverHandler` calls `event.preventDefault()`, which it
+  does only for `text/plain` data.
+- `event.dataTransfer` is typed `DataTransfer | null`, so the handlers use `!`
+  or a check before reading it.
 - The tsconfig is the course's older setup (`target: es6`, `module: commonjs`)
   and doesn't enable `noUncheckedIndexedAccess` or `exactOptionalPropertyTypes`
   like the other projects. With no imports or exports, `app.ts` is a script, so

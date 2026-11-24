@@ -40,7 +40,7 @@ concept notes, and study questions.
 7. [Linked List](projects/linked-list/README.md): a project that practices classes and generics, as a simple starting point for a generic data structure.
 8. [Deriving Types from Types](deriving%20types/README.md): `typeof`, `keyof`, indexed access, mapped, template literal, and conditional types with `infer`.
 9. [ECMAScript Decorators](ecmascript%20decorators/README.md): class, method, and field decorators and decorator factories.
-10. [Drag & Drop](projects/drag-and-drop/README.md): a browser project (in progress) that practices classes, DOM types, validation, and a method decorator.
+10. [Drag & Drop](projects/drag-and-drop/README.md): a browser project that practices classes, generics, interfaces, DOM types, validation, a method decorator, and native drag and drop.
 
 Standalone example folders are type-checked one file at a time with
 `tsc --noEmit --strict <file>`. The compiler folder and the projects have their
