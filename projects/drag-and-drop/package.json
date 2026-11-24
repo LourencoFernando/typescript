@@ -1,0 +1,19 @@
+{
+  "name": "drag-and-drop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser app in TypeScript for adding projects through a form and dragging them between active and finished lists.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "keywords": [
+    "typescript",
+    "drag-and-drop",
+    "dom"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}

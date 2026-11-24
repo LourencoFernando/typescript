@@ -1,0 +1,8 @@
+# Compiled output; rebuild with `tsc -p .`.
+dist/
+
+# Dependencies; reinstall with `npm ci`.
+node_modules/
+
+# macOS folder metadata.
+.DS_Store

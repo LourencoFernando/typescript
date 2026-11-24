@@ -6,7 +6,7 @@ disable-model-invocation: true
 ---
 
 Organize the requested learning examples and create a focused local Git commit.
-Follow the repository's CLAUDE.md and AGENTS.md guidance.
+Follow the repository's AGENTS.md guidance.
 
 Files to organize (empty means infer from Git status): $ARGUMENTS
 
