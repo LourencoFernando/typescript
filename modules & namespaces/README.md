@@ -68,6 +68,27 @@ Open the page through `npm start`: browsers block module scripts loaded from
 - **One bundle:** without `outFile`, a single output file now needs a bundler
   such as Vite, esbuild, or webpack.
 
+## Conclusion: prefer ES modules
+
+After writing both versions, ES modules are more convenient than namespaces:
+
+- **Loading:** `index.html` has one `<script type="module">` tag, and the
+  browser loads the rest by following the imports. The namespace version
+  needed one tag per file in the right order, and a missing or misplaced tag
+  only failed at runtime, even when `tsc` passed.
+- **Dependencies:** each file's imports show exactly what it uses and where it
+  comes from. With namespaces, every exported name went into the shared
+  `App` object, and `/// <reference>` lines only listed files for the
+  compiler.
+- **Scope:** a module's names stay private unless exported, so nothing leaks
+  onto `window`.
+- **Tooling:** TypeScript 7 removed the `outFile` and `module: "amd"` options
+  that made namespaces practical. Bundlers, editors, and Node all work with
+  ES modules.
+
+Namespaces are still useful to recognize in older code and in `.d.ts` files
+that describe global libraries, but new multi-file code should use ES modules.
+
 ## Study questions
 
 - How does a namespace differ from an ES module, and why do modern projects
