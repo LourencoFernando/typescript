@@ -31,7 +31,7 @@ a method ## How it works
 | `app.css` | Styles |
 | `src/app.ts` | TypeScript source |
 | `dist/` | Compiled JavaScript (ignored by git) |
-| `package.json` | `lite-server` dev dependency and the `start` script |
+| `package.json` | `browser-sync` dev dependency and the `start` script |
 
 ## Type-check, build, and run
 
@@ -40,7 +40,7 @@ JavaScript. `noEmitOnError` is on, so a type error leaves `dist/` unchanged.
 
 ```sh
 cd projects/drag-and-drop
-npm ci              # install lite-server
+npm ci              # install browser-sync
 tsc --noEmit -p .   # type-check only
 tsc -p . --watch    # build dist/app.js and rebuild on save
 npm start           # serve the folder and reload the browser on changes
@@ -65,5 +65,7 @@ npm start           # serve the folder and reload the browser on changes
   and doesn't enable `noUncheckedIndexedAccess` or `exactOptionalPropertyTypes`
   like the other projects. With no imports or exports, `app.ts` is a script, so
   `module` doesn't affect the output.
-- `npm audit` reports vulnerabilities in `lite-server`'s dependencies with no
-  fix available. It's only a local development server.
+- `npm start` runs `browser-sync` directly. The course used `lite-server`,
+  but every version of it depends on an old `browser-sync` with vulnerable
+  dependencies (`axios`, `send`) and no fix. `browser-sync` 3.0.4 audits clean
+  and reloads the page when `index.html`, `app.css`, or `dist/` changes.
