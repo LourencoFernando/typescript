@@ -19,6 +19,7 @@ The folders are checked and run differently:
 | `projects/first-typescript-project/` | First practice project (investment calculator, work in progress) | `cd projects/first-typescript-project && tsc --noEmit -p .` | `node calculator.ts` (Node 24 strips types) |
 | `projects/linked-list/` | Generic singly linked list (simple starting point) | `cd projects/linked-list && tsc --noEmit -p .` | `node linked-list.ts` (Node 24 strips types; no parameter properties) |
 | `projects/drag-and-drop/` | Browser drag & drop app | `cd projects/drag-and-drop && npm ci && tsc --noEmit -p .` | `tsc -p .` (writes ignored `dist/`), then `npm start` (`browser-sync`) |
+| `modules & namespaces/` | The drag & drop app split into ES modules (namespace version in history) | `cd "modules & namespaces" && npm ci && tsc --noEmit -p .` | `tsc -p .` (writes ignored `dist/`), then `npm start` (`browser-sync`, served over HTTP for modules) |
 
 ## Compiler configuration
 
