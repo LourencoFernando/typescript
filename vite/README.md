@@ -4,8 +4,7 @@ Creating and running TypeScript projects with Vite: scaffolding a project,
 running the dev server, and building for production.
 
 `vite-project/` was created with `npm create vite@latest` and the vanilla
-TypeScript template. It uses the template's own tsconfig and formatting
-defaults, except for the commented `.ts` files.
+TypeScript template, and is kept as generated.
 
 ## Layout
 
