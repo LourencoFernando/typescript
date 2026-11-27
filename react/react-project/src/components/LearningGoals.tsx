@@ -5,14 +5,14 @@ export type Goal = {
     description: string;
 };
 
-interface CourseGoalsProps {
+interface LearningGoalsProps {
     goals: Goal[];
     // A callback prop: the parent decides what deleting means.
     onDelete: (id: number) => void;
 }
 
 // Destructuring in the parameter list, typed by the props interface.
-export default function CourseGoals({ goals, onDelete }: CourseGoalsProps) {
+export default function LearningGoals({ goals, onDelete }: LearningGoalsProps) {
     return (
         <ul>
             {goals.map((goal) => (

@@ -2,7 +2,7 @@ import { useState } from "react";
 import goalsImg from "./assets/goals.jpg";
 // `type Goal` marks a type-only import, which verbatimModuleSyntax requires;
 // Vite removes it from the JavaScript.
-import CourseGoals, { type Goal } from "./components/CourseGoals";
+import LearningGoals, { type Goal } from "./components/LearningGoals";
 import Header from "./components/Header";
 import NewGoal from "./components/NewGoal";
 
@@ -58,7 +58,7 @@ function App() {
             </Header>
             {/* Callbacks are passed down as props; the parent owns the state. */}
             <NewGoal onAdd={handleAddGoal} />
-            <CourseGoals goals={goals} onDelete={handleDeleteGoal} />
+            <LearningGoals goals={goals} onDelete={handleDeleteGoal} />
         </main>
     );
 }
