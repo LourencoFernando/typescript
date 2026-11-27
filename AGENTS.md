@@ -20,7 +20,7 @@ The folders are checked and run differently:
 | `projects/linked-list/` | Generic singly linked list (simple starting point) | `cd projects/linked-list && tsc --noEmit -p .` | `node linked-list.ts` (Node 24 strips types; no parameter properties) |
 | `projects/drag-and-drop/` | Browser drag & drop app | `cd projects/drag-and-drop && npm ci && tsc --noEmit -p .` | `tsc -p .` (writes ignored `dist/`), then `npm start` (`browser-sync`) |
 | `modules & namespaces/` | The drag & drop app split into ES modules (namespace version in history) | `cd "modules & namespaces" && npm ci && tsc --noEmit -p .` | `tsc -p .` (writes ignored `dist/`), then `npm start` (`browser-sync`, served over HTTP for modules) |
-| `projects/share-a-place/` | Select & share a place: using third-party libraries (axios, OpenLayers) with Vite (TypeScript 7, Vite 8) instead of the course's webpack | `cd projects/share-a-place && npm ci && npx tsc --noEmit -p .` | `npm run dev` (dev server, strips types without checking); `npm run build` runs `tsc` then writes ignored `dist/` |
+| `projects/share-a-place/` | Select & share a place: using third-party libraries (axios, OpenLayers) with Vite (TypeScript 7, Vite 8) | `cd projects/share-a-place && npm ci && npx tsc --noEmit -p .` | `npm run dev` (dev server, strips types without checking); `npm run build` runs `tsc` then writes ignored `dist/` |
 | `vite/vite-project/` | Vite vanilla TypeScript starter (TypeScript 7, Vite 8) | `cd vite/vite-project && npm ci && npx tsc --noEmit -p .` | `npm run dev` (dev server, strips types without checking); `npm run build` runs `tsc` then writes ignored `dist/` |
 
 ## Compiler configuration
