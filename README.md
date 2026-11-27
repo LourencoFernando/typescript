@@ -43,6 +43,7 @@ concept notes, and study questions.
 10. [Drag & Drop](projects/drag-and-drop/README.md): a browser project that practices classes, generics, interfaces, DOM types, validation, a method decorator, and native drag and drop.
 11. [Modules & Namespaces](modules%20%26%20namespaces/README.md): splitting code across files with namespaces and ES modules.
 12. [Vite](vite/README.md): creating and running TypeScript projects with Vite.
+13. [Share a Place](projects/share-a-place/README.md): a project that practices using a third-party library and its types.
 
 Standalone example folders are type-checked one file at a time with
 `tsc --noEmit --strict <file>`. The compiler folder and the projects have their

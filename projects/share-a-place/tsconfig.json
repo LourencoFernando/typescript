@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "target": "es2023",
+        "module": "esnext",
+        "lib": ["ES2023", "DOM", "DOM.Iterable"],
+        // Only Vite's client types (import.meta.env, CSS imports); Node APIs are not typed.
+        "types": ["vite/client"],
+        "skipLibCheck": true,
+
+        // Bundler mode: Vite resolves imports and strips types, tsc only checks.
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "verbatimModuleSyntax": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        // Vite strips types without generating code, so enum and parameter properties are rejected.
+        "erasableSyntaxOnly": true,
+
+        // Type checking, matching the other projects in this repo.
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "include": ["src"]
+}
