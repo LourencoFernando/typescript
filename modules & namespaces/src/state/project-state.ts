@@ -73,8 +73,8 @@ export const projectState = ProjectState.getInstance();
  *
  * - Exporting an instance (`projectState`) makes the module itself the
  *   singleton: ES modules are evaluated once and cached, so `getInstance()` is
- *   no longer what guarantees a single store. It is kept here as the course's
- *   pattern; in module-based code, exporting the instance alone is common.
+ *   no longer what guarantees a single store. It is kept here as the classic
+ *   singleton pattern; in module-based code, exporting the instance alone is common.
  *
  * - Not exporting `State` and `Listener` hides them from other modules, which
  *   namespaces could only do by leaving off `export` inside the namespace

@@ -53,7 +53,7 @@ Open the page through `npm start`: browsers block module scripts loaded from
   browser needed one `<script>` tag per file, dependencies first.
   `/// <reference path>` lines only told TypeScript which files to read for
   types; they load nothing at runtime.
-- **TypeScript 7:** the course bundled namespaces into one file with
+- **TypeScript 7:** namespaces were traditionally bundled into one file with
   `"module": "amd"` and `outFile`. TypeScript 7 removed both (TS5108, TS5102),
   and 6.0 only accepts them with `"ignoreDeprecations": "6.0"`. The namespace
   version here therefore compiled each file separately and listed the

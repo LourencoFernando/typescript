@@ -3,7 +3,9 @@
 A practice project for a browser app in TypeScript: add projects through a
 form and drag them between "active" and "finished" lists. It applies classes,
 generics, abstract classes, interfaces, enums, DOM types, union types, tuples,
-a method ## How it works
+a method decorator, and native drag and drop.
+
+## How it works
 
 - `ProjectInput` renders the form from the `#project-input` template, validates
   the inputs with `validate` on submit, and adds a project to the state.
@@ -19,9 +21,6 @@ a method ## How it works
   template and attaches it to a host element.
 - Dragging an item stores its id in `dataTransfer`. Dropping it on the other
   list calls `moveProject`, and both lists re-render from the new state.
-
- and drag events are
-  left for later iterations.
 
 ## Layout
 
@@ -61,11 +60,11 @@ npm start           # serve the folder and reload the browser on changes
   does only for `text/plain` data.
 - `event.dataTransfer` is typed `DataTransfer | null`, so the handlers use `!`
   or a check before reading it.
-- The tsconfig is the course's older setup (`target: es6`, `module: commonjs`)
+- The tsconfig uses an older setup (`target: es6`, `module: commonjs`)
   and doesn't enable `noUncheckedIndexedAccess` or `exactOptionalPropertyTypes`
   like the other projects. With no imports or exports, `app.ts` is a script, so
   `module` doesn't affect the output.
-- `npm start` runs `browser-sync` directly. The course used `lite-server`,
-  but every version of it depends on an old `browser-sync` with vulnerable
-  dependencies (`axios`, `send`) and no fix. `browser-sync` 3.0.4 audits clean
+- `npm start` runs `browser-sync` directly instead of `lite-server`, a common
+  choice for this kind of setup. Every version of `lite-server` depends on an
+  old `browser-sync` with vulnerable dependencies (`axios`, `send`) and no fix. `browser-sync` 3.0.4 audits clean
   and reloads the page when `index.html`, `app.css`, or `dist/` changes.

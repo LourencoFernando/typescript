@@ -1,4 +1,4 @@
-// Investment calculator (work in progress).
+// Investment calculator.
 // Input data:
 // - initial amount
 // - annual contribution
