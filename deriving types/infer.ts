@@ -4,7 +4,7 @@ function add(a: number, b: number) {
 
 // `typeof` turns the function value into its type:
 // (a: number, b: number) => number. Type names are usually PascalCase
-// (`AddFn`); the lowercase name is kept from the course code.
+// (`AddFn`); the lowercase name is kept from the original example.
 type addFn = typeof add;
 
 // `infer RV` declares a type variable inside a conditional type. If T is a

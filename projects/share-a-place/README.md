@@ -1,18 +1,18 @@
 # Share a Place
 
-A practice project from the course's "Select & Share a Place" section. The
+A practice project for selecting an address and showing it on a map. The
 goal is to learn how to use a third-party library in TypeScript: installing
 it, finding or adding its types (`@types` packages or `declare` for libraries
 without types), and working with its API in a type-safe way.
 
-The course builds it with webpack and ts-loader. This version uses Vite
-instead, because ts-loader needs the TypeScript compiler's JavaScript API,
-which TypeScript 7 (the native compiler) doesn't provide. With Vite, the
+A common setup for this kind of app is webpack with ts-loader. This version
+uses Vite instead, because ts-loader needs the TypeScript compiler's
+JavaScript API, which TypeScript 7 (the native compiler) doesn't provide. With Vite, the
 TypeScript version is independent of the bundler: Vite strips types, and `tsc`
 only type-checks.
 
-The course shows the result with Google Maps. This version uses two
-OpenStreetMap services instead, which need no API key:
+Instead of Google Maps, which needs an API key, this version uses two
+OpenStreetMap services that need no key:
 
 - **Nominatim** turns the address into coordinates. It only geocodes; it
   doesn't draw maps. `NominatimSearchResponse` in `src/app.ts` types the part

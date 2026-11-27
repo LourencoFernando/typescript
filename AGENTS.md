@@ -2,7 +2,7 @@
 
 ## Purpose and layout
 
-This is a TypeScript learning repository (Udemy course notes plus experiments),
+This is a TypeScript learning repository (study notes, examples, and experiments),
 progressing from language fundamentals to architecture. Keep examples small,
 readable, and focused on the concept being studied.
 
@@ -16,7 +16,7 @@ The folders are checked and run differently:
 | --- | --- | --- | --- |
 | `foundations/`, `classes & Interfaces/`, `advanced types/`, `generic types/`, `deriving types/`, `ecmascript decorators/` | Standalone single-file examples, not a single application; no tsconfig | `tsc --noEmit --strict <folder>/<file>.ts` (one file at a time) | Usually not run; some throw on purpose, `foundations/forms.ts` needs a browser DOM |
 | `compiler/` | Compiler-option experiments with `package.json` (`@types/node`) | `cd compiler && npm ci && tsc -p . --noEmit` | `tsc -p .` then `node dist/app.js` |
-| `projects/first-typescript-project/` | First practice project (investment calculator, work in progress) | `cd projects/first-typescript-project && tsc --noEmit -p .` | `node calculator.ts` (Node 24 strips types) |
+| `projects/first-typescript-project/` | First practice project (investment calculator) | `cd projects/first-typescript-project && tsc --noEmit -p .` | `node calculator.ts` (Node 24 strips types) |
 | `projects/linked-list/` | Generic singly linked list (simple starting point) | `cd projects/linked-list && tsc --noEmit -p .` | `node linked-list.ts` (Node 24 strips types; no parameter properties) |
 | `projects/drag-and-drop/` | Browser drag & drop app | `cd projects/drag-and-drop && npm ci && tsc --noEmit -p .` | `tsc -p .` (writes ignored `dist/`), then `npm start` (`browser-sync`) |
 | `modules & namespaces/` | The drag & drop app split into ES modules (namespace version in history) | `cd "modules & namespaces" && npm ci && tsc --noEmit -p .` | `tsc -p .` (writes ignored `dist/`), then `npm start` (`browser-sync`, served over HTTP for modules) |
@@ -32,8 +32,8 @@ Passing a filename to `tsc` ignores `tsconfig.json`. Use `-p .` inside
 - `compiler/dist/` is committed on purpose so the output can be compared after
   changing options. Rebuild it with `tsc -p .` when `app.ts` or emission options
   change. `noEmitOnError` is on.
-- `projects/drag-and-drop/` is the exception among the projects: it uses the
-  course's tsconfig (`experimentalDecorators`, `noEmitOnError`, no
+- `projects/drag-and-drop/` is the exception among the projects: it uses an
+  older-style tsconfig (`experimentalDecorators`, `noEmitOnError`, no
   `noUncheckedIndexedAccess`), compiles `src/` to `dist/` (git-ignored), and
   the page loads `dist/app.js` as a plain script.
 - The other project folders' tsconfigs have no `outDir` but enable `declaration`
@@ -55,7 +55,7 @@ Passing a filename to `tsc` ignores `tsconfig.json`. Use `-p .` inside
   type assertions, and functions that throw.
 - Avoid introducing frameworks, dependencies, or shared abstractions for small
   exercises unless the task calls for them.
-- `projects/first-typescript-project/calculator.ts` is in-progress course work.
+- `projects/first-typescript-project/calculator.ts` is a finished practice project.
   It returns an error `string` instead of throwing, and `printResults` narrows
   the `InvestmentResult[] | string` union. Keep that design (it is the concept
   being practiced) and don't rework the logic beyond what is asked.

@@ -4,14 +4,22 @@ A learning project for understanding TypeScript deeply, from basic concepts to a
 
 The goal is to explain how the language works, why a design makes sense, and which tradeoffs it introduces—and then put that understanding into practice.
 
+**Status:** the planned topics are covered. The projects may get further
+iterations, and the topics under "Next steps" are still to be explored.
+
 ## Learning focus
+
+Covered by the examples and projects:
 
 - **Fundamentals:** types, inference, functions, objects, unions, and narrowing.
 - **Advanced features:** generics, conditional and mapped types, utility types, and type-level programming.
 - **Language foundations:** structural typing, assignability, compiler behavior, and the boundary between compile-time types and JavaScript runtime behavior.
+- **Practice:** small projects that connect concepts to real design decisions, from a CLI calculator to browser apps with third-party libraries and React.
+
+Next steps:
+
 - **Paradigms:** object-oriented, functional, and composition-based approaches and their tradeoffs.
 - **Architecture:** domain modeling, module boundaries, dependency management, API design, and maintainability.
-- **Practice:** small experiments and implementations that connect concepts to real design decisions.
 
 ## Learning with AI
 
@@ -24,7 +32,16 @@ For each topic:
 3. Compare alternatives and explain the tradeoffs.
 4. Record what it means for larger systems and architectural decisions.
 
-This repository will grow with exercises, experiments, and notes as the learning progresses.
+## Prerequisites
+
+- **Node.js 24:** it runs `.ts` files directly by stripping the types
+  (`node file.ts`), as long as they don't use syntax that generates code, such as
+  `enum` or parameter properties.
+- **A global `tsc`** (`npm install -g typescript`) for the standalone examples,
+  `compiler/`, and the projects without their own TypeScript dependency.
+- **npm:** the folders with a `package.json` need `npm ci` first. The Vite,
+  Share a Place, and React projects install TypeScript 7 locally, so use
+  `npx tsc` there.
 
 ## Exercises and notes
 
@@ -46,6 +63,12 @@ concept notes, and study questions.
 13. [Share a Place](projects/share-a-place/README.md): a project that practices using a third-party library and its types.
 14. [React & TypeScript](react/README.md): building React components with typed props, state, and events.
 
-Standalone example folders are type-checked one file at a time with
-`tsc --noEmit --strict <file>`. The compiler folder and the projects have their
-own `tsconfig.json`; run `tsc --noEmit -p .` inside them.
+## Type-checking and running
+
+The standalone example folders have no `tsconfig.json`. Type-check them one file
+at a time with `tsc --noEmit --strict <file>`: compiling them together fails
+because the files reuse names.
+
+The compiler folder and the projects have their own `tsconfig.json`, and the
+exact commands differ (`tsc -p .`, `npx tsc -p .`, or `npx tsc -b` for React).
+Each folder's README lists its type-check, build, and run commands.

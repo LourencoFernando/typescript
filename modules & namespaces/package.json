@@ -1,17 +1,17 @@
 {
-  "name": "understanding-typescript",
+  "name": "modules-and-namespaces",
   "version": "1.0.0",
-  "description": "Understanding TypeScript Course Setup",
-  "main": "app.js",
+  "private": true,
+  "description": "The drag and drop browser app split into ES modules, with the namespace version in the git history.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "browser-sync start --server --files \"index.html, app.css, dist/**/*.js\" --no-notify"
   },
   "keywords": [
     "typescript",
-    "course"
+    "modules",
+    "namespaces"
   ],
-  "author": "Maximilian Schwarzmüller",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^3.0.4"

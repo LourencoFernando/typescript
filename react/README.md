@@ -34,7 +34,7 @@ it. Run `npx tsc -b` (or `npm run build`) to catch them.
    `#root`.
 3. `react-project/src/components/Header.tsx`: props typed with an interface,
    and `children?: ReactNode` for a wrapper component.
-4. `react-project/src/components/CourseGoals.tsx`: an exported `Goal` type, a
+4. `react-project/src/components/LearningGoals.tsx`: an exported `Goal` type, a
    list rendered with `map` and `key`, and a callback prop (`onDelete`).
 5. `react-project/src/components/NewGoal.tsx`: `useRef<HTMLInputElement>`
    and a form submit handler typed with `SubmitEvent<HTMLFormElement>`.
