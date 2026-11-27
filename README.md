@@ -1,6 +1,6 @@
-# TypeScript: From Fundamentals to Architecture
+# TypeScript: From Fundamentals to Real Projects
 
-A learning project for understanding TypeScript deeply, from basic concepts to advanced features, with the perspective of a software architect in the AI era.
+A learning project for understanding TypeScript deeply, from basic concepts and advanced type features to real projects, with an eye on the design decisions behind them.
 
 The goal is to explain how the language works, why a design makes sense, and which tradeoffs it introduces—and then put that understanding into practice.
 

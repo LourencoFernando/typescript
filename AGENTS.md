@@ -3,7 +3,7 @@
 ## Purpose and layout
 
 This is a TypeScript learning repository (study notes, examples, and experiments),
-progressing from language fundamentals to architecture. Keep examples small,
+progressing from language fundamentals to real projects. Keep examples small,
 readable, and focused on the concept being studied.
 
 - `README.md` describes the learning goals and the reading order of the folders.
