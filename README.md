@@ -44,6 +44,7 @@ concept notes, and study questions.
 11. [Modules & Namespaces](modules%20%26%20namespaces/README.md): splitting code across files with namespaces and ES modules.
 12. [Vite](vite/README.md): creating and running TypeScript projects with Vite.
 13. [Share a Place](projects/share-a-place/README.md): a project that practices using a third-party library and its types.
+14. [React & TypeScript](react/README.md): building React components with typed props, state, and events.
 
 Standalone example folders are type-checked one file at a time with
 `tsc --noEmit --strict <file>`. The compiler folder and the projects have their

@@ -22,6 +22,7 @@ The folders are checked and run differently:
 | `modules & namespaces/` | The drag & drop app split into ES modules (namespace version in history) | `cd "modules & namespaces" && npm ci && tsc --noEmit -p .` | `tsc -p .` (writes ignored `dist/`), then `npm start` (`browser-sync`, served over HTTP for modules) |
 | `projects/share-a-place/` | Select & share a place: using third-party libraries (axios, OpenLayers) with Vite (TypeScript 7, Vite 8) | `cd projects/share-a-place && npm ci && npx tsc --noEmit -p .` | `npm run dev` (dev server, strips types without checking); `npm run build` runs `tsc` then writes ignored `dist/` |
 | `vite/vite-project/` | Vite vanilla TypeScript starter (TypeScript 7, Vite 8) | `cd vite/vite-project && npm ci && npx tsc --noEmit -p .` | `npm run dev` (dev server, strips types without checking); `npm run build` runs `tsc` then writes ignored `dist/` |
+| `react/react-project/` | Vite React TypeScript project (React 19, TypeScript 7, Vite 8); root tsconfig only references `tsconfig.app.json` and `tsconfig.node.json` | `cd react/react-project && npm ci && npx tsc -b` | `npm run dev` (dev server, strips types without checking); `npm run build` runs `tsc -b` then writes ignored `dist/` |
 
 ## Compiler configuration
 
